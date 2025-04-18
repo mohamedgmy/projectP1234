@@ -1,303 +1,246 @@
-[![AOS - Animate on scroll library](https://s32.postimg.org/ktvt59hol/aos_header.png)](http://michalsnik.github.io/aos/)
+<p align="center">
+  <a href="https://getbootstrap.com/">
+    <img src="https://getbootstrap.com/docs/5.3/assets/brand/bootstrap-logo-shadow.png" alt="Bootstrap logo" width="200" height="165">
+  </a>
+</p>
+
+<h3 align="center">Bootstrap</h3>
+
+<p align="center">
+  Sleek, intuitive, and powerful front-end framework for faster and easier web development.
+  <br>
+  <a href="https://getbootstrap.com/docs/5.3/"><strong>Explore Bootstrap docs »</strong></a>
+  <br>
+  <br>
+  <a href="https://github.com/twbs/bootstrap/issues/new?assignees=-&labels=bug&template=bug_report.yml">Report bug</a>
+  ·
+  <a href="https://github.com/twbs/bootstrap/issues/new?assignees=&labels=feature&template=feature_request.yml">Request feature</a>
+  ·
+  <a href="https://themes.getbootstrap.com/">Themes</a>
+  ·
+  <a href="https://blog.getbootstrap.com/">Blog</a>
+</p>
+
+
+## Bootstrap 5
+
+Our default branch is for development of our Bootstrap 5 release. Head to the [`v4-dev` branch](https://github.com/twbs/bootstrap/tree/v4-dev) to view the readme, documentation, and source code for Bootstrap 4.
+
+
+## Table of contents
+
+- [Quick start](#quick-start)
+- [Status](#status)
+- [What's included](#whats-included)
+- [Bugs and feature requests](#bugs-and-feature-requests)
+- [Documentation](#documentation)
+- [Contributing](#contributing)
+- [Community](#community)
+- [Versioning](#versioning)
+- [Creators](#creators)
+- [Thanks](#thanks)
+- [Copyright and license](#copyright-and-license)
+
+
+## Quick start
+
+Several quick start options are available:
+
+- [Download the latest release](https://github.com/twbs/bootstrap/archive/v5.3.2.zip)
+- Clone the repo: `git clone https://github.com/twbs/bootstrap.git`
+- Install with [npm](https://www.npmjs.com/): `npm install bootstrap@v5.3.2`
+- Install with [yarn](https://yarnpkg.com/): `yarn add bootstrap@v5.3.2`
+- Install with [Composer](https://getcomposer.org/): `composer require twbs/bootstrap:5.3.2`
+- Install with [NuGet](https://www.nuget.org/): CSS: `Install-Package bootstrap` Sass: `Install-Package bootstrap.sass`
+
+Read the [Getting started page](https://getbootstrap.com/docs/5.3/getting-started/introduction/) for information on the framework contents, templates, examples, and more.
+
+
+## Status
+
+[![Build Status](https://img.shields.io/github/actions/workflow/status/twbs/bootstrap/js.yml?branch=main&label=JS%20Tests&logo=github)](https://github.com/twbs/bootstrap/actions/workflows/js.yml?query=workflow%3AJS+branch%3Amain)
+[![npm version](https://img.shields.io/npm/v/bootstrap?logo=npm&logoColor=fff)](https://www.npmjs.com/package/bootstrap)
+[![Gem version](https://img.shields.io/gem/v/bootstrap?logo=rubygems&logoColor=fff)](https://rubygems.org/gems/bootstrap)
+[![Meteor Atmosphere](https://img.shields.io/badge/meteor-twbs%3Abootstrap-blue?logo=meteor&logoColor=fff)](https://atmospherejs.com/twbs/bootstrap)
+[![Packagist Prerelease](https://img.shields.io/packagist/vpre/twbs/bootstrap?logo=packagist&logoColor=fff)](https://packagist.org/packages/twbs/bootstrap)
+[![NuGet](https://img.shields.io/nuget/vpre/bootstrap?logo=nuget&logoColor=fff)](https://www.nuget.org/packages/bootstrap/absoluteLatest)
+[![Coverage Status](https://img.shields.io/coveralls/github/twbs/bootstrap/main?logo=coveralls&logoColor=fff)](https://coveralls.io/github/twbs/bootstrap?branch=main)
+[![CSS gzip size](https://img.badgesize.io/twbs/bootstrap/main/dist/css/bootstrap.min.css?compression=gzip&label=CSS%20gzip%20size)](https://github.com/twbs/bootstrap/blob/main/dist/css/bootstrap.min.css)
+[![CSS Brotli size](https://img.badgesize.io/twbs/bootstrap/main/dist/css/bootstrap.min.css?compression=brotli&label=CSS%20Brotli%20size)](https://github.com/twbs/bootstrap/blob/main/dist/css/bootstrap.min.css)
+[![JS gzip size](https://img.badgesize.io/twbs/bootstrap/main/dist/js/bootstrap.min.js?compression=gzip&label=JS%20gzip%20size)](https://github.com/twbs/bootstrap/blob/main/dist/js/bootstrap.min.js)
+[![JS Brotli size](https://img.badgesize.io/twbs/bootstrap/main/dist/js/bootstrap.min.js?compression=brotli&label=JS%20Brotli%20size)](https://github.com/twbs/bootstrap/blob/main/dist/js/bootstrap.min.js)
+[![Backers on Open Collective](https://img.shields.io/opencollective/backers/bootstrap?logo=opencollective&logoColor=fff)](#backers)
+[![Sponsors on Open Collective](https://img.shields.io/opencollective/sponsors/bootstrap?logo=opencollective&logoColor=fff)](#sponsors)
+
+
+## What's included
 
-[![NPM version](https://img.shields.io/npm/v/aos.svg?style=flat)](https://npmjs.org/package/aos)
-[![NPM downloads](https://img.shields.io/npm/dm/aos.svg?style=flat)](https://npmjs.org/package/aos)
-[![Build Status](https://travis-ci.org/michalsnik/aos.svg?branch=master)](https://travis-ci.org/michalsnik/aos)
-[![Gitter](https://badges.gitter.im/michalsnik/aos.svg)](https://gitter.im/michalsnik/aos?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
+Within the download you'll find the following directories and files, logically grouping common assets and providing both compiled and minified variations.
+
+<details>
+  <summary>Download contents</summary>
+
+  ```text
+  bootstrap/
+  ├── css/
+  │   ├── bootstrap-grid.css
+  │   ├── bootstrap-grid.css.map
+  │   ├── bootstrap-grid.min.css
+  │   ├── bootstrap-grid.min.css.map
+  │   ├── bootstrap-grid.rtl.css
+  │   ├── bootstrap-grid.rtl.css.map
+  │   ├── bootstrap-grid.rtl.min.css
+  │   ├── bootstrap-grid.rtl.min.css.map
+  │   ├── bootstrap-reboot.css
+  │   ├── bootstrap-reboot.css.map
+  │   ├── bootstrap-reboot.min.css
+  │   ├── bootstrap-reboot.min.css.map
+  │   ├── bootstrap-reboot.rtl.css
+  │   ├── bootstrap-reboot.rtl.css.map
+  │   ├── bootstrap-reboot.rtl.min.css
+  │   ├── bootstrap-reboot.rtl.min.css.map
+  │   ├── bootstrap-utilities.css
+  │   ├── bootstrap-utilities.css.map
+  │   ├── bootstrap-utilities.min.css
+  │   ├── bootstrap-utilities.min.css.map
+  │   ├── bootstrap-utilities.rtl.css
+  │   ├── bootstrap-utilities.rtl.css.map
+  │   ├── bootstrap-utilities.rtl.min.css
+  │   ├── bootstrap-utilities.rtl.min.css.map
+  │   ├── bootstrap.css
+  │   ├── bootstrap.css.map
+  │   ├── bootstrap.min.css
+  │   ├── bootstrap.min.css.map
+  │   ├── bootstrap.rtl.css
+  │   ├── bootstrap.rtl.css.map
+  │   ├── bootstrap.rtl.min.css
+  │   └── bootstrap.rtl.min.css.map
+  └── js/
+      ├── bootstrap.bundle.js
+      ├── bootstrap.bundle.js.map
+      ├── bootstrap.bundle.min.js
+      ├── bootstrap.bundle.min.js.map
+      ├── bootstrap.esm.js
+      ├── bootstrap.esm.js.map
+      ├── bootstrap.esm.min.js
+      ├── bootstrap.esm.min.js.map
+      ├── bootstrap.js
+      ├── bootstrap.js.map
+      ├── bootstrap.min.js
+      └── bootstrap.min.js.map
+  ```
+</details>
 
-[![Twitter Follow](https://img.shields.io/twitter/follow/michalsnik.svg?style=social)](https://twitter.com/michalsnik) [![Twitter URL](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/home?status=AOS%20-%20Animate%20on%20Scroll%20library%0Ahttps%3A//github.com/michalsnik/aos)
+We provide compiled CSS and JS (`bootstrap.*`), as well as compiled and minified CSS and JS (`bootstrap.min.*`). [Source maps](https://developers.google.com/web/tools/chrome-devtools/javascript/source-maps) (`bootstrap.*.map`) are available for use with certain browsers' developer tools. Bundled JS files (`bootstrap.bundle.js` and minified `bootstrap.bundle.min.js`) include [Popper](https://popper.js.org/).
 
-Small library to animate elements on your page as you scroll.
 
-You may say it's like WOWJS, yeah - you're right, effect is similar to WOWJS, but I had a different idea how to make such a plugin, so here it is. CSS3 driven scroll animation library.
+## Bugs and feature requests
 
-AOS allows you to animate elements as you scroll down, and up.
-If you scroll back to top, elements will animate to it's previous state and are ready to animate again if you scroll down.
+Have a bug or a feature request? Please first read the [issue guidelines](https://github.com/twbs/bootstrap/blob/main/.github/CONTRIBUTING.md#using-the-issue-tracker) and search for existing and closed issues. If your problem or idea is not addressed yet, [please open a new issue](https://github.com/twbs/bootstrap/issues/new/choose).
 
-👉 To get a better understanding how this actually works, I encourage you to check [my post on CSS-tricks](https://css-tricks.com/aos-css-driven-scroll-animation-library/).
 
----
+## Documentation
 
-### 🚀 [Demo](http://michalsnik.github.io/aos/)
+Bootstrap's documentation, included in this repo in the root directory, is built with [Hugo](https://gohugo.io/) and publicly hosted on GitHub Pages at <https://getbootstrap.com/>. The docs may also be run locally.
 
-### 🌟 Codepen Examples
-- [Different build in animations](http://codepen.io/michalsnik/pen/WxNdvq)
-- [With anchor setting in use](http://codepen.io/michalsnik/pen/jrOYVO)
-- [With anchor-placement and different easing](http://codepen.io/michalsnik/pen/EyxoNm)
-- [With simple custom animations](http://codepen.io/michalsnik/pen/WxvNvE)
+Documentation search is powered by [Algolia's DocSearch](https://docsearch.algolia.com/).
 
----
+### Running documentation locally
 
-## ❗ Attention
-From version `2.0.0` attributes `aos` are no longer supported, always use `data-aos`.
+1. Run `npm install` to install the Node.js dependencies, including Hugo (the site builder).
+2. Run `npm run test` (or a specific npm script) to rebuild distributed CSS and JavaScript files, as well as our docs assets.
+3. From the root `/bootstrap` directory, run `npm run docs-serve` in the command line.
+4. Open `http://localhost:9001/` in your browser, and voilà.
 
-## ⚙ Setup
+Learn more about using Hugo by reading its [documentation](https://gohugo.io/documentation/).
 
-### Install AOS
+### Documentation for previous releases
 
-- Using `bower`
+You can find all our previous releases docs on <https://getbootstrap.com/docs/versions/>.
 
-    ```bash
-      bower install aos --save
-    ```
+[Previous releases](https://github.com/twbs/bootstrap/releases) and their documentation are also available for download.
 
-- Using `npm`
 
-    ```bash
-      npm install aos --save
-    ```
+## Contributing
 
-- Direct download -> [click here](https://github.com/michalsnik/aos/archive/master.zip)
+Please read through our [contributing guidelines](https://github.com/twbs/bootstrap/blob/main/.github/CONTRIBUTING.md). Included are directions for opening issues, coding standards, and notes on development.
 
+Moreover, if your pull request contains JavaScript patches or features, you must include [relevant unit tests](https://github.com/twbs/bootstrap/tree/main/js/tests). All HTML and CSS should conform to the [Code Guide](https://github.com/mdo/code-guide), maintained by [Mark Otto](https://github.com/mdo).
 
-### Link styles
+Editor preferences are available in the [editor config](https://github.com/twbs/bootstrap/blob/main/.editorconfig) for easy use in common text editors. Read more and download plugins at <https://editorconfig.org/>.
 
-```html
-  <link rel="stylesheet" href="bower_components/aos/dist/aos.css" />
-```
 
-### Add scripts
+## Community
 
-```html
-  <script src="bower_components/aos/dist/aos.js"></script>
-```
+Get updates on Bootstrap's development and chat with the project maintainers and community members.
 
-AOS from version `1.2.0` is available as UMD module, so you can use it as AMD, Global, Node or ES6 module.
+- Follow [@getbootstrap on Twitter](https://twitter.com/getbootstrap).
+- Read and subscribe to [The Official Bootstrap Blog](https://blog.getbootstrap.com/).
+- Ask questions and explore [our GitHub Discussions](https://github.com/twbs/bootstrap/discussions).
+- Discuss, ask questions, and more on [the community Discord](https://discord.gg/bZUvakRU3M) or [Bootstrap subreddit](https://reddit.com/r/bootstrap).
+- Chat with fellow Bootstrappers in IRC. On the `irc.libera.chat` server, in the `#bootstrap` channel.
+- Implementation help may be found at Stack Overflow (tagged [`bootstrap-5`](https://stackoverflow.com/questions/tagged/bootstrap-5)).
+- Developers should use the keyword `bootstrap` on packages which modify or add to the functionality of Bootstrap when distributing through [npm](https://www.npmjs.com/browse/keyword/bootstrap) or similar delivery mechanisms for maximum discoverability.
 
-### Init AOS
 
-```javascript
-  <script>
-    AOS.init();
-  </script>
-```
+## Versioning
 
-## 🤔 How to use it?
+For transparency into our release cycle and in striving to maintain backward compatibility, Bootstrap is maintained under [the Semantic Versioning guidelines](https://semver.org/). Sometimes we screw up, but we adhere to those rules whenever possible.
 
-### Basic usage
+See [the Releases section of our GitHub project](https://github.com/twbs/bootstrap/releases) for changelogs for each release version of Bootstrap. Release announcement posts on [the official Bootstrap blog](https://blog.getbootstrap.com/) contain summaries of the most noteworthy changes made in each release.
 
-  All you have to do is to add `data-aos` attribute to html element, like so:
 
-```html
-  <div data-aos="animation_name">
-```
+## Creators
 
-  Script will trigger "animation_name" animation on this element, if you scroll to it.
+**Mark Otto**
 
-  [Down below](https://github.com/michalsnik/aos#-animations) is a list of all available animations for now :)
+- <https://twitter.com/mdo>
+- <https://github.com/mdo>
 
-### 🔥 Advanced settings
+**Jacob Thornton**
 
-These settings can be set both on certain elements, or as default while initializing script (in options object without `data-` part).
+- <https://twitter.com/fat>
+- <https://github.com/fat>
 
-| Attribute | Description | Example value | Default value |
-|---------------------------|-------------|---------------|---------|
-| *`data-aos-offset`* | Change offset to trigger animations sooner or later (px) | 200 | 120 |
-| *`data-aos-duration`* | *Duration of animation (ms) | 600 | 400 |
-| *`data-aos-easing`* | Choose timing function to ease elements in different ways | ease-in-sine | ease |
-| *`data-aos-delay`* | Delay animation (ms) | 300 | 0 |
-| *`data-aos-anchor`* | Anchor element, whose offset will be counted to trigger animation instead of actual elements offset | #selector | null |
-| *`data-aos-anchor-placement`* | Anchor placement - which one position of element on the screen should trigger animation | top-center | top-bottom |
-| *`data-aos-once`* | Choose wheter animation should fire once, or every time you scroll up/down to element | true | false |
 
-*Duration accept values from 50 to 3000, with step 50ms, it's because duration of animation is handled by css, and to not make css longer than it is already I created implementations only in this range. I think this should be good for almost all cases.
+## Thanks
 
-If not, you may write simple CSS on your page that will add another duration option value available, for example:
+<a href="https://www.browserstack.com/">
+  <img src="https://live.browserstack.com/images/opensource/browserstack-logo.svg" alt="BrowserStack" width="192" height="42">
+</a>
 
-```css
-  body[data-aos-duration='4000'] [data-aos], [data-aos][data-aos][data-aos-duration='4000']{
-    transition-duration: 4000ms;
-  }
-```
+Thanks to [BrowserStack](https://www.browserstack.com/) for providing the infrastructure that allows us to test in real browsers!
 
-This code will add 4000ms duration available for you to set on AOS elements, or to set as global duration while initializing AOS script.
+<a href="https://www.netlify.com/">
+  <img src="https://www.netlify.com/v3/img/components/full-logo-light.svg" alt="Netlify" width="147" height="40">
+</a>
 
-Notice that double `[data-aos][data-aos]` - it's not a mistake, it is a trick, to make individual settings more important than global, without need to write ugly "!important" there :)
+Thanks to [Netlify](https://www.netlify.com/) for providing us with Deploy Previews!
 
-`data-aos-anchor-placement` - You can set different placement option on each element, the principle is pretty simple, each anchor-placement option contains two words i.e. `top-center`. This means that animation will be triggered when `top` of element will reach `center` of the window.
-`bottom-top` means that animation will be triggered when `bottom` of an element reach `top` of the window, and so on.
-Down below you can find list of all anchor-placement options.
 
-#### Examples:
+## Sponsors
 
-```html
-  <div data-aos="fade-zoom-in" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="600">
-```
-```html
-  <div data-aos="flip-left" data-aos-delay="100" data-aos-anchor=".example-selector">
-```
-```html
-  <div data-aos="fade-up" data-aos-anchor-placement="top-center">
-```
+Support this project by becoming a sponsor. Your logo will show up here with a link to your website. [[Become a sponsor](https://opencollective.com/bootstrap#sponsor)]
 
+[![OC sponsor 0](https://opencollective.com/bootstrap/sponsor/0/avatar.svg)](https://opencollective.com/bootstrap/sponsor/0/website)
+[![OC sponsor 1](https://opencollective.com/bootstrap/sponsor/1/avatar.svg)](https://opencollective.com/bootstrap/sponsor/1/website)
+[![OC sponsor 2](https://opencollective.com/bootstrap/sponsor/2/avatar.svg)](https://opencollective.com/bootstrap/sponsor/2/website)
+[![OC sponsor 3](https://opencollective.com/bootstrap/sponsor/3/avatar.svg)](https://opencollective.com/bootstrap/sponsor/3/website)
+[![OC sponsor 4](https://opencollective.com/bootstrap/sponsor/4/avatar.svg)](https://opencollective.com/bootstrap/sponsor/4/website)
+[![OC sponsor 5](https://opencollective.com/bootstrap/sponsor/5/avatar.svg)](https://opencollective.com/bootstrap/sponsor/5/website)
+[![OC sponsor 6](https://opencollective.com/bootstrap/sponsor/6/avatar.svg)](https://opencollective.com/bootstrap/sponsor/6/website)
+[![OC sponsor 7](https://opencollective.com/bootstrap/sponsor/7/avatar.svg)](https://opencollective.com/bootstrap/sponsor/7/website)
+[![OC sponsor 8](https://opencollective.com/bootstrap/sponsor/8/avatar.svg)](https://opencollective.com/bootstrap/sponsor/8/website)
+[![OC sponsor 9](https://opencollective.com/bootstrap/sponsor/9/avatar.svg)](https://opencollective.com/bootstrap/sponsor/9/website)
 
-#### API
 
-AOS object is exposed as a global variable, for now there are three methods available:
+## Backers
 
-  * `init` - initialize AOS
-  * `refresh` - recalculate all offsets and positions of elements (called on window resize)
-  * `refreshHard` - reinit array with AOS elements and trigger `refresh` (called on DOM changes that are related to `aos` elements)
+Thank you to all our backers! 🙏 [[Become a backer](https://opencollective.com/bootstrap#backer)]
 
-Example execution:
-```javascript
-  AOS.refresh();
-```
+[![Backers](https://opencollective.com/bootstrap/backers.svg?width=890)](https://opencollective.com/bootstrap#backers)
 
-By default AOS is watching for DOM changes and if there are any new elements loaded asynchronously or when something is removed from DOM it calls `refreshHard` automatically. In browsers that don't support `MutationObserver` like IE you might need to call `AOS.refreshHard()` by yourself.
 
-`refresh` method is called on window resize and so on, as it doesn't require to build new store with AOS elements and should be as light as possible.
+## Copyright and license
 
-### Global settings
-
-If you don't want to change setting for each element separately, you can change it globally.
-
-To do this, pass options object to `init()` function, like so:
-
-```javascript
-  <script>
-    AOS.init({
-      offset: 200,
-      duration: 600,
-      easing: 'ease-in-sine',
-      delay: 100,
-    });
-  </script>
-```
-
-#### Additional configuration
-
-These settings can be set only in options object while initializing AOS.
-
-| Setting | Description | Example value | Default value |
-|---------------------------|-------------|---------------|---------|
-| *`disable`* | Condition when AOS should be disabled | mobile | false |
-| *`startEvent`* | Name of event, on which AOS should be initialized | exampleEvent | DOMContentLoaded |
-
-##### Disabling AOS
-
-If you want to disable AOS on certain device or under any statement you can set `disable` option. Like so:
-
-```javascript
-  <script>
-    AOS.init({
-      disable: 'mobile'
-    });
-  </script>
-```
-
-There are several options that you can use to fit AOS perfectly into your project, you can pass one of three device types:
-`mobile` (phones and tablets), `phone` or `tablet`. This will disable AOS on those certains devices. But if you want make your own condition, simple type your statement instead of device type name:
-
-```javascript
-  disable: window.innerWidth < 1024
-```
-
-There is also posibility to pass a `function`, which should at the end return `true` or `false`:
-
-```javascript
-  disable: function () {
-    var maxWidth = 1024;
-    return window.innerWidth < maxWidth;
-  }
-```
-
-##### Start event
-
-If you don't want to initialize AOS on `DOMContentLoaded` event, you can pass your own event name and trigger it whenever you want. AOS is listening for this event on `document` element.
-
-```javascript
-  <script>
-    AOS.init({
-      startEvent: 'someCoolEvent'
-    });
-  </script>
-```
-
-**Important note:** If you set `startEvent: 'load'` it will add event listener on `window` instead of `document`.
-
-
-### 👻 Animations
-
-There are serveral predefined animations you can use already:
-
-  * Fade animations:
-    * fade
-    * fade-up
-    * fade-down
-    * fade-left
-    * fade-right
-    * fade-up-right
-    * fade-up-left
-    * fade-down-right
-    * fade-down-left
-
-  * Flip animations:
-    * flip-up
-    * flip-down
-    * flip-left
-    * flip-right
-
-  * Slide animations:
-    * slide-up
-    * slide-down
-    * slide-left
-    * slide-right
-
-  * Zoom animations:
-    * zoom-in
-    * zoom-in-up
-    * zoom-in-down
-    * zoom-in-left
-    * zoom-in-right
-    * zoom-out
-    * zoom-out-up
-    * zoom-out-down
-    * zoom-out-left
-    * zoom-out-right
-
-### Anchor placement:
-
-  * top-bottom
-  * top-center
-  * top-top
-  * center-bottom
-  * center-center
-  * center-top
-  * bottom-bottom
-  * bottom-center
-  * bottom-top
-
-
-### Easing functions:
-
-You can choose one of these timing function to animate elements nicely:
-
-  * linear
-  * ease
-  * ease-in
-  * ease-out
-  * ease-in-out
-  * ease-in-back
-  * ease-out-back
-  * ease-in-out-back
-  * ease-in-sine
-  * ease-out-sine
-  * ease-in-out-sine
-  * ease-in-quad
-  * ease-out-quad
-  * ease-in-out-quad
-  * ease-in-cubic
-  * ease-out-cubic
-  * ease-in-out-cubic
-  * ease-in-quart
-  * ease-out-quart
-  * ease-in-out-quart
-
-## ✌️ [Contributing](CONTRIBUTING.md)
-
-## 📝 [Changelog](CHANGELOG.md)
-
-## ❔Questions
-
-If you have any questions, ideas or whatsoever, please check [AOS contribution guide](CONTRIBUTING.md) and don't hesitate to create new issues.
+Code and documentation copyright 2011–2023 the [Bootstrap Authors](https://github.com/twbs/bootstrap/graphs/contributors). Code released under the [MIT License](https://github.com/twbs/bootstrap/blob/main/LICENSE). Docs released under [Creative Commons](https://creativecommons.org/licenses/by/3.0/).
