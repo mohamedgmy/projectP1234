@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="خدمات مطبعة بيرق للدعاية والإعلان في القصيم - طباعة رقمية، هوية بصرية، لوحات إعلانية وأكثر">
+    <meta name="keywords" content="مطبعة بيرق, خدمات الطباعة, طباعة رقمية, هوية بصرية, لوحات إعلانية, القصيم, السعودية">
+    <title>خدماتنا - مطبعة بيرق للدعاية والإعلان</title>
+    
+    <!-- الخطوط -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.rtl.min.css">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
+    
+    <!-- AOS CSS -->
+    <link rel="stylesheet" href="node_modules/aos/dist/aos.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <!-- القائمة العلوية -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="images/logo.jpg" alt="مطبعة بيرق">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">الرئيسية</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="services.html">خدماتنا</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">تواصل معنا</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" id="downloadProfile">تحميل البروفايل</a>
+                    </li>
+                </ul>
+                <div class="lang-switch">
+                    <a href="#" onclick="toggleLanguage()">English</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- عنوان الصفحة -->
+    <section class="hero-section" style="height: 50vh; min-height: 400px;">
+        <div class="container">
+            <div class="hero-content" data-aos="fade-up">
+                <h1>خدماتنا</h1>
+                <p>نقدم مجموعة متكاملة من خدمات الطباعة والدعاية والإعلان بأعلى جودة</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم الخدمات التفصيلية -->
+    <section class="section services-section">
+        <div class="container">
+            <div class="section-title" data-aos="fade-up">
+                <h2>خدماتنا المتميزة</h2>
+                <p>نقدم مجموعة متنوعة من خدمات الطباعة والدعاية والإعلان لتلبية احتياجاتكم</p>
+            </div>
+            
+            <!-- الخدمة الأولى -->
+            <div class="service-detail" data-aos="fade-up">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="service-detail-img">
+                            <img src="images/tR.jpg" alt="طباعة رقمية" class="img-fluid">
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <h3 class="service-detail-title">طباعة رقمية</h3>
+                        <p class="service-detail-description">نقدم خدمات الطباعة الرقمية عالية الجودة لجميع أنواع المطبوعات بأحجام مختلفة وبأسرع وقت. تتميز الطباعة الرقمية بالدقة العالية والألوان الزاهية والتكلفة المناسبة للكميات الصغيرة والمتوسطة.</p>
+                        <div class="service-features">
+                            <div class="service-feature-item">
+                                <div class="service-feature-icon">
+                                    <i class="fa fa-check"></i>
+                                </div>
+                                <div>طباعة البروشورات والفلايرات</div>
+                            </div>
+                            <div class="service-feature-item">
+                                <div class="service-feature-icon">
+                                    <i class="fa fa-check"></i>
+                                </div>
+                                <div>طباعة الكروت الشخصية وبطاقات العمل</div>
+                            </div>
+                            <div class="service-feature-item">
+                                <div class="service-feature-icon">
+                                    <i class="fa fa-check"></i>
+                                </div>
+                                <div>طباعة المجلات والكتالوجات</div>
+                            </div>
+                            <div class="service-feature-item">
+                                <div class="service-feature-icon">
+                                    <i class="fa fa-check"></i>
+                                </div>
+                                <div>طباعة الملصقات والبوسترات</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- الخدمة الثانية -->
+            <div class="service-detail" data-aos="fade-up">
+                <div class="row">
+                    <div class="col-lg-6 order-lg-2">
+                        <div class="service-detail-img">
+                            <img src="images/hP.jpeg" alt="طباعة الهوية البصرية" class="img-fluid">
+                        </div>
+                    </div>
+                    <div class="col-lg-6 order-lg-1">
+                        <h3 class="service-detail-title">طباعة الهوية البصرية</h3>
+                        <p class="service-detail-description">نقدم خدمات تصميم وطباعة الهوية البصرية الكاملة للشركات والمؤسسات، بدءاً من تصميم الشعار وحتى جميع المطبوعات الرسمية. نحرص على إبراز هوية العميل بشكل احترافي ومميز يعكس رؤيته وقيمه.</p>
+                        <div class="service-features">
+                            <div class="service-feature-item">
+                                <div class="service-feature-icon">
+                                    <i class="fa fa-check"></i>
+                                </div>
+                                <div>تصميم الشعارات</div>
+                            </div>
+                            <div class="service-feature-item">
+                                <div class="service-feature-icon">
+                                    <i class="fa fa-check"></i>
+                                </div>
+                                <div>تصميم وطباعة بطاقات العمل</div>
+                            </div>
+                            <div class="service-feature-item">
+                                <div class="service-feature-icon">
+                                    <i class="fa fa-check"></i>
+                                </div>
+                                <div>تصميم وطباعة الأوراق الرسمية والمغلفات</div>
+                            </div>
+                            <div class="service-feature-item">
+                                <div class="service-feature-icon">
+                                    <i class="fa fa-check"></i>
+                                </div>
+                                <div>تصميم وطباعة الملفات والفولدرات</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- الخدمة الثالثة -->
+            <div class="service-detail" data-aos="fade-up">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="service-detail-img">
+                            <img src="images/L3.jpeg" alt="لوحات إعلانية" class="img-fluid">
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <h3 class="service-detail-title">لوحات إعلانية</h3>
+                        <p class="service-detail-description">نقدم خدمات تصميم وتنفيذ اللوحات الإعلانية بمختلف الأحجام والخامات للداخل والخارج بأعلى جودة. نستخدم أفضل الخامات المقاومة للعوامل الجوية لضمان متانة وجودة اللوحات الخارجية.</p>
+                        <div class="service-features">
+                            <div class="service-feature-item">
+                                <div class="service-feature-icon">
+                                    <i class="fa fa-check"></i>
+                                </div>
+                                <div>لوحات الفلكس والبنر</div>
+                            </div>
+                            <div class="service-feature-item">
+                                <div class="service-feature-icon">
+                                    <i class="fa fa-check"></i>
+                                </div>
+                                <div>لوحات الأكريليك والألومنيوم</div>
+                            </div>
+                            <div class="service-feature-item">
+                                <div class="service-feature-icon">
+                                    <i class="fa fa-check"></i>
+                                </div>
+                                <div>لوحات LED المضيئة</div>
+                            </div>
+                            <div class="service-feature-item">
+                                <div class="service-feature-icon">
+                                    <i class="fa fa-check"></i>
+                                </div>
+                                <div>لوحات الطرق والمجسمات الإعلانية</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- الخدمة الرابعة -->
+            <div class="service-detail" data-aos="fade-up">
+                <div class="row">
+                    <div class="col-lg-6 order-lg-2">
+                        <div class="service-detail-img">
+                            <img src="images/HD.jpeg" alt="الهدايا الدعائية" class="img-fluid">
+                        </div>
+                    </div>
+                    <div class="col-lg-6 order-lg-1">
+                        <h3 class="service-detail-title">الهدايا الدعائية</h3>
+                        <p class="service-detail-description">نقدم خدمات طباعة الشعارات والتصاميم على الهدايا الدعائية المختلفة مثل الأقلام والأكواب والميداليات وغيرها. تعتبر الهدايا الدعائية وسيلة فعالة للترويج للعلامة التجارية وزيادة الوعي بها.</p>
+                        <div class="service-features">
+                            <div class="service-feature-item">
+                                <div class="service-feature-icon">
+                                    <i class="fa fa-check"></i>
+                                </div>
+                                <div>طباعة على الأقلام والأكواب</div>
+                            </div>
+                            <div class="service-feature-item">
+                                <div class="service-feature-icon">
+                                    <i class="fa fa-check"></i>
+                                </div>
+                                <div>طباعة على التيشيرتات والقبعات</div>
+                            </div>
+                            <div class="service-feature-item">
+                                <div class="service-feature-icon">
+                                    <i class="fa fa-check"></i>
+                                </div>
+                                <div>طباعة على الميداليات والدروع</div>
+                            </div>
+                            <div class="service-feature-item">
+                                <div class="service-feature-icon">
+                                    <i class="fa fa-check"></i>
+                                </div>
+                                <div>طباعة على الحقائب والمحافظ</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- الخدمة الخامسة -->
+            <div class="service-detail" data-aos="fade-up">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="service-detail-img">
+                            <img src="images/book.jpeg" alt="طباعة الكتب والمجلات" class="img-fluid">
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <h3 class="service-detail-title">طباعة الكتب والمجلات</h3>
+                        <p class="service-detail-description">نقدم خدمات طباعة الكتب والمجلات والنشرات بمختلف المقاسات والتشطيبات وبجودة عالية. نوفر خيارات متعددة للتجليد والورق لتناسب مختلف الاحتياجات والميزانيات.</p>
+                        <div class="service-features">
+                            <div class="service-feature-item">
+                                <div class="service-feature-icon">
+                                    <i class="fa fa-check"></i>
+                                </div>
+                                <div>طباعة الكتب بمختلف المقاسات</div>
+                            </div>
+                            <div class="service-feature-item">
+                                <div class="service-feature-icon">
+                                    <i class="fa fa-check"></i>
+                                </div>
+                                <div>طباعة المجلات الدورية</div>
+                            </div>
+                            <div class="service-feature-item">
+                                <div class="service-feature-icon">
+                                    <i class="fa fa-check"></i>
+                                </div>
+                                <div>طباعة النشرات والتقارير السنوية</div>
+                            </div>
+                            <div class="service-feature-item">
+                                <div class="service-feature-icon">
+                                    <i class="fa fa-check"></i>
+                                </div>
+                                <div>خيارات متعددة للتجليد والتشطيب</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- الخدمة السادسة -->
+            <div class="service-detail" data-aos="fade-up">
+                <div class="row">
+                    <div class="col-lg-6 order-lg-2">
+                        <div class="service-detail-img">
+                            <img src="images/tR.jpg" alt="تصميم جرافيك" class="img-fluid">
+                        </div>
+                    </div>
+                    <div class="col-lg-6 order-lg-1">
+                        <h3 class="service-detail-title">تصميم جرافيك</h3>
+                        <p class="service-detail-description">نقدم خدمات تصميم جرافيك احترافية لجميع احتياجات العملاء من شعارات وإعلانات ومطبوعات. يعمل لدينا فريق من المصممين المحترفين ذوي الخبرة في مجال التصميم الجرافيكي والإبداعي.</p>
+                        <div class="service-features">
+                            <div class="service-feature-item">
+                                <div class="service-feature-icon">
+                                    <i class="fa fa-check"></i>
+                                </div>
+                                <div>تصميم الشعارات والهويات البصرية</div>
+                            </div>
+                            <div class="service-feature-item">
+                                <div class="service-feature-icon">
+                                    <i class="fa fa-check"></i>
+                                </div>
+                                <div>تصميم الإعلانات والبوسترات</div>
+                            </div>
+                            <div class="service-feature-item">
+                                <div class="service-feature-icon">
+                                    <i class="fa fa-check"></i>
+                                </div>
+                                <div>تصميم منشورات مواقع التواصل الاجتماعي</div>
+                            </div>
+                            <div class="service-feature-item">
+                                <div class="service-feature-icon">
+                                    <i class="fa fa-check"></i>
+                                </div>
+                                <div>تصميم المطبوعات والكتالوجات</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- معرض الأعمال -->
+    <section class="section gallery-section" id="gallery">
+        <div class="container">
+            <div class="section-title" data-aos="fade-up">
+                <h2>معرض أعمالنا</h2>
+                <p>نماذج من أعمالنا السابقة في مختلف مجالات الطباعة والدعاية</p>
+            </div>
+            <div class="row">
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="gallery-item">
+                        <img src="images/3one.jpg" alt="طباعة هوية بصرية" class="gallery-img">
+                        <div class="gallery-overlay">
+                            <div class="gallery-icon">
+                                <i class="fa fa-search-plus"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="gallery-item">
+                        <img src="images/3too.jpg" alt="لوحات إعلانية" class="gallery-img">
+                        <div class="gallery-overlay">
+                            <div class="gallery-icon">
+                                <i class="fa fa-search-plus"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="gallery-item">
+                        <img src="images/3three.jpg" alt="مطبوعات دعائية" class="gallery-img">
+                        <div class="gallery-overlay">
+                            <div class="gallery-icon">
+                                <i class="fa fa-search-plus"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="400">
+                    <div class="gallery-item">
+                        <img src="images/3one.jpg" alt="هدايا دعائية" class="gallery-img">
+                        <div class="gallery-overlay">
+                            <div class="gallery-icon">
+                                <i class="fa fa-search-plus"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="500">
+                    <div class="gallery-item">
+                        <img src="images/3too.jpg" alt="كتب ومجلات" class="gallery-img">
+                        <div class="gallery-overlay">
+                            <div class="gallery-icon">
+                                <i class="fa fa-search-plus"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="600">
+                    <div class="gallery-item">
+                        <img src="images/3three.jpg" alt="تصميم جرافيك" class="gallery-img">
+                        <div class="gallery-overlay">
+                            <div class="gallery-icon">
+                                <i class="fa fa-search-plus"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم دعوة للتواصل -->
+    <section class="section cta-section">
+        <div class="container">
+            <div class="cta-content" data-aos="fade-up">
+                <h2>هل تحتاج إلى خدمات طباعية متميزة؟</h2>
+                <p>تواصل معنا الآن للحصول على استشارة مجانية وعرض سعر لمشروعك</p>
+                <a href="contact.html" class="btn btn-cta">تواصل معنا</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- التذييل (Footer) -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="footer-about">
+                        <div class="footer-logo">
+                            <img src="images/logo.jpg" alt="مطبعة بيرق">
+                        </div>
+                        <p>مطبعة بيرق للدعاية والإعلان، نقدم خدمات طباعية متكاملة بأعلى جودة وأفضل الأسعار.</p>
+                        <div class="footer-social">
+                            <a href="#"><i class="fa fa-facebook"></i></a>
+                            <a href="#"><i class="fa fa-twitter"></i></a>
+                            <a href="#"><i class="fa fa-instagram"></i></a>
+                            <a href="#"><i class="fa fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="footer-links">
+                        <h3 class="footer-title">روابط سريعة</h3>
+                        <ul class="footer-links">
+                            <li><a href="index.html">الرئيسية</a></li>
+                            <li><a href="services.html">خدماتنا</a></li>
+                            <li><a href="contact.html">تواصل معنا</a></li>
+                            <li><a href="#" id="downloadProfileFooter">تحميل البروفايل</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="footer-contact">
+                        <h3 class="footer-title">معلومات التواصل</h3>
+                        <div class="footer-contact-item">
+                            <div class="footer-contact-icon">
+                                <i class="fa fa-map-marker"></i>
+                            </div>
+                            <div>القصيم، المملكة العربية السعودية</div>
+                        </div>
+                        <div class="footer-contact-item">
+                            <div class="footer-contact-icon">
+                                <i class="fa fa-phone"></i>
+                            </div>
+                            <div><a href="tel:0538773161">0538773161</a></div>
+                        </div>
+                        <div class="footer-contact-item">
+                            <div class="footer-contact-icon">
+                                <i class="fa fa-whatsapp"></i>
+                            </div>
+                            <div><a href="https://wa.me/966536338630" target="_blank">966536338630</a></div>
+                        </div>
+                        <div class="footer-contact-item">
+                            <div class="footer-contact-icon">
+                                <i class="fa fa-envelope"></i>
+                            </div>
+                            <div><a href="mailto:info@beiraq.com">info@beiraq.com</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>جميع الحقوق محفوظة &copy; 2025 مطبعة بيرق للدعاية والإعلان</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- حاوية التنبيهات -->
+    <div class="alert-container position-fixed bottom-0 end-0 p-3"></div>
+
+    <!-- JavaScript Libraries -->
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/@popperjs/core/dist/umd/popper.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="node_modules/aos/dist/aos.js"></script>
+    
+    <!-- Custom JavaScript -->
+    <script src="js/main.js"></script>
+    <script src="js/seo.js"></script>
+    <script src="js/responsive-test.js"></script>
+</body>
+</html>

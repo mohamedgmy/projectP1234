@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="تواصل مع مطبعة بيرق للدعاية والإعلان في القصيم - احصل على خدمات طباعية احترافية وعصرية">
+    <meta name="keywords" content="مطبعة بيرق, تواصل معنا, طباعة, دعاية, إعلان, القصيم, السعودية">
+    <title>تواصل معنا - مطبعة بيرق للدعاية والإعلان</title>
+    
+    <!-- الخطوط -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.rtl.min.css">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
+    
+    <!-- AOS CSS -->
+    <link rel="stylesheet" href="node_modules/aos/dist/aos.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <!-- القائمة العلوية -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="images/logo.jpg" alt="مطبعة بيرق">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">الرئيسية</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="services.html">خدماتنا</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="contact.html">تواصل معنا</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" id="downloadProfile">تحميل البروفايل</a>
+                    </li>
+                </ul>
+                <div class="lang-switch">
+                    <a href="#" onclick="toggleLanguage()">English</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- عنوان الصفحة -->
+    <section class="hero-section" style="height: 50vh; min-height: 400px;">
+        <div class="container">
+            <div class="hero-content" data-aos="fade-up">
+                <h1>تواصل معنا</h1>
+                <p>نحن هنا للإجابة على استفساراتكم وتلبية احتياجاتكم</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم التواصل -->
+    <section class="section contact-section">
+        <div class="container">
+            <div class="section-title" data-aos="fade-up">
+                <h2>معلومات التواصل</h2>
+                <p>يمكنكم التواصل معنا من خلال الوسائل التالية</p>
+            </div>
+            <div class="row">
+                <div class="col-lg-6" data-aos="fade-right" data-aos-delay="100">
+                    <div class="contact-info">
+                        <div class="contact-info-item">
+                            <div class="contact-info-icon">
+                                <i class="fa fa-map-marker"></i>
+                            </div>
+                            <div class="contact-info-content">
+                                <h4>العنوان</h4>
+                                <p>القصيم، المملكة العربية السعودية</p>
+                            </div>
+                        </div>
+                        <div class="contact-info-item">
+                            <div class="contact-info-icon">
+                                <i class="fa fa-phone"></i>
+                            </div>
+                            <div class="contact-info-content">
+                                <h4>رقم الهاتف</h4>
+                                <p><a href="tel:0538773161">0538773161</a></p>
+                            </div>
+                        </div>
+                        <div class="contact-info-item">
+                            <div class="contact-info-icon">
+                                <i class="fa fa-whatsapp"></i>
+                            </div>
+                            <div class="contact-info-content">
+                                <h4>واتساب</h4>
+                                <p><a href="https://wa.me/966536338630" target="_blank">966536338630</a></p>
+                            </div>
+                        </div>
+                        <div class="contact-info-item">
+                            <div class="contact-info-icon">
+                                <i class="fa fa-envelope"></i>
+                            </div>
+                            <div class="contact-info-content">
+                                <h4>البريد الإلكتروني</h4>
+                                <p><a href="mailto:info@beiraq.com">info@beiraq.com</a></p>
+                            </div>
+                        </div>
+                        <div class="contact-info-item">
+                            <div class="contact-info-icon">
+                                <i class="fa fa-clock-o"></i>
+                            </div>
+                            <div class="contact-info-content">
+                                <h4>ساعات العمل</h4>
+                                <p>السبت - الخميس: 8:00 صباحاً - 8:00 مساءً</p>
+                                <p>الجمعة: مغلق</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="social-links mt-4">
+                        <h4>تابعنا على وسائل التواصل الاجتماعي</h4>
+                        <div class="d-flex mt-3">
+                            <a href="#" class="me-3"><i class="fa fa-facebook fa-2x"></i></a>
+                            <a href="#" class="me-3"><i class="fa fa-twitter fa-2x"></i></a>
+                            <a href="#" class="me-3"><i class="fa fa-instagram fa-2x"></i></a>
+                            <a href="#" class="me-3"><i class="fa fa-linkedin fa-2x"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6" data-aos="fade-left" data-aos-delay="200">
+                    <div class="contact-form">
+                        <h3 class="mb-4">أرسل لنا رسالة</h3>
+                        <div class="alert-container mb-3"></div>
+                        <form id="contactForm">
+                            <div class="form-group">
+                                <label for="name">الاسم الكامل</label>
+                                <input type="text" class="form-control" id="name" placeholder="أدخل اسمك الكامل" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">البريد الإلكتروني</label>
+                                <input type="email" class="form-control" id="email" placeholder="أدخل بريدك الإلكتروني" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">رقم الهاتف</label>
+                                <input type="tel" class="form-control" id="phone" placeholder="أدخل رقم هاتفك" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">الرسالة</label>
+                                <textarea class="form-control" id="message" rows="5" placeholder="اكتب رسالتك هنا" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-submit mt-3">إرسال الرسالة</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- خريطة الموقع (اختياري) -->
+    <section class="section map-section bg-light">
+        <div class="container">
+            <div class="section-title" data-aos="fade-up">
+                <h2>موقعنا</h2>
+                <p>يمكنكم زيارتنا في موقعنا بالقصيم</p>
+            </div>
+            <div class="map-container" data-aos="fade-up" data-aos-delay="100">
+                <div class="ratio ratio-16x9">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d115266.48078644933!2d43.93876540931886!3d26.33258505595796!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x157f95ed7af0bb9f%3A0x57a9e31c05e5d380!2z2KfZhNmC2LXZitmFIC0g2KfZhNmF2YXZhNmD2Kkg2KfZhNi52LHYqNmK2Kkg2KfZhNiz2LnZiNiv2YrYqQ!5e0!3m2!1sar!2s!4v1650000000000!5m2!1sar!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم الأسئلة الشائعة -->
+    <section class="section faq-section">
+        <div class="container">
+            <div class="section-title" data-aos="fade-up">
+                <h2>الأسئلة الشائعة</h2>
+                <p>إجابات على الأسئلة الأكثر شيوعاً</p>
+            </div>
+            <div class="row">
+                <div class="col-lg-8 mx-auto" data-aos="fade-up" data-aos-delay="100">
+                    <div class="accordion" id="faqAccordion">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingOne">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    ما هي مدة تنفيذ الطلبات؟
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    تختلف مدة تنفيذ الطلبات حسب نوع الخدمة وحجم الطلب. بشكل عام، نسعى دائماً لتنفيذ الطلبات في أسرع وقت ممكن مع الحفاظ على الجودة العالية. يمكنكم الاستفسار عن المدة المتوقعة لتنفيذ طلبكم عند التواصل معنا.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingTwo">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    هل تقدمون خدمات التوصيل؟
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    نعم، نقدم خدمات التوصيل داخل منطقة القصيم، كما يمكننا الشحن إلى جميع مناطق المملكة عبر شركات الشحن المعتمدة. تختلف رسوم التوصيل حسب المنطقة وحجم الطلب.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingThree">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    هل يمكنني الحصول على عينة قبل طباعة الكمية الكاملة؟
+                                </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    نعم، يمكننا توفير عينة للاطلاع عليها قبل طباعة الكمية الكاملة، وذلك لضمان رضاكم عن المنتج النهائي. قد تطبق رسوم إضافية على العينات حسب نوع المنتج.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingFour">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                    ما هي طرق الدفع المتاحة؟
+                                </button>
+                            </h2>
+                            <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    نقبل الدفع نقداً، وعبر التحويل البنكي، وبطاقات مدى، وبطاقات الائتمان. كما يمكن الاتفاق على دفعة مقدمة والباقي عند الاستلام للطلبات الكبيرة.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- التذييل (Footer) -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="footer-about">
+                        <div class="footer-logo">
+                            <img src="images/logo.jpg" alt="مطبعة بيرق">
+                        </div>
+                        <p>مطبعة بيرق للدعاية والإعلان، نقدم خدمات طباعية متكاملة بأعلى جودة وأفضل الأسعار.</p>
+                        <div class="footer-social">
+                            <a href="#"><i class="fa fa-facebook"></i></a>
+                            <a href="#"><i class="fa fa-twitter"></i></a>
+                            <a href="#"><i class="fa fa-instagram"></i></a>
+                            <a href="#"><i class="fa fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="footer-links">
+                        <h3 class="footer-title">روابط سريعة</h3>
+                        <ul class="footer-links">
+                            <li><a href="index.html">الرئيسية</a></li>
+                            <li><a href="services.html">خدماتنا</a></li>
+                            <li><a href="contact.html">تواصل معنا</a></li>
+                            <li><a href="#" id="downloadProfileFooter">تحميل البروفايل</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="footer-contact">
+                        <h3 class="footer-title">معلومات التواصل</h3>
+                        <div class="footer-contact-item">
+                            <div class="footer-contact-icon">
+                                <i class="fa fa-map-marker"></i>
+                            </div>
+                            <div>القصيم، المملكة العربية السعودية</div>
+                        </div>
+                        <div class="footer-contact-item">
+                            <div class="footer-contact-icon">
+                                <i class="fa fa-phone"></i>
+                            </div>
+                            <div><a href="tel:0538773161">0538773161</a></div>
+                        </div>
+                        <div class="footer-contact-item">
+                            <div class="footer-contact-icon">
+                                <i class="fa fa-whatsapp"></i>
+                            </div>
+                            <div><a href="https://wa.me/966536338630" target="_blank">966536338630</a></div>
+                        </div>
+                        <div class="footer-contact-item">
+                            <div class="footer-contact-icon">
+                                <i class="fa fa-envelope"></i>
+                            </div>
+                            <div><a href="mailto:info@beiraq.com">info@beiraq.com</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>جميع الحقوق محفوظة &copy; 2025 مطبعة بيرق للدعاية والإعلان</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- حاوية التنبيهات -->
+    <div class="alert-container position-fixed bottom-0 end-0 p-3"></div>
+
+    <!-- JavaScript Libraries -->
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/@popperjs/core/dist/umd/popper.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="node_modules/aos/dist/aos.js"></script>
+    
+    <!-- Custom JavaScript -->
+    <script src="js/main.js"></script>
+    <script src="js/seo.js"></script>
+    <script src="js/responsive-test.js"></script>
+</body>
+</html>
