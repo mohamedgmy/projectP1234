@@ -1,376 +1,303 @@
-<!-- <HEADER> // IGNORE IT -->
-<p align="center">
-  <img src="https://rawcdn.githack.com/popperjs/popper-core/8805a5d7599e14619c9e7ac19a3713285d8e5d7f/docs/src/images/popper-logo-outlined.svg" alt="Popper" height="300px"/>
-</p>
+[![AOS - Animate on scroll library](https://s32.postimg.org/ktvt59hol/aos_header.png)](http://michalsnik.github.io/aos/)
 
-<div align="center">
-  <h1>Tooltip & Popover Positioning Engine</h1>
-</div>
+[![NPM version](https://img.shields.io/npm/v/aos.svg?style=flat)](https://npmjs.org/package/aos)
+[![NPM downloads](https://img.shields.io/npm/dm/aos.svg?style=flat)](https://npmjs.org/package/aos)
+[![Build Status](https://travis-ci.org/michalsnik/aos.svg?branch=master)](https://travis-ci.org/michalsnik/aos)
+[![Gitter](https://badges.gitter.im/michalsnik/aos.svg)](https://gitter.im/michalsnik/aos?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
 
-<p align="center">
-  <a href="https://www.npmjs.com/package/@popperjs/core">
-    <img src="https://img.shields.io/npm/v/@popperjs/core?style=for-the-badge" alt="npm version" />
-  </a>
-  <a href="https://www.npmjs.com/package/@popperjs/core">
-    <img src="https://img.shields.io/endpoint?style=for-the-badge&url=https://runkit.io/fezvrasta/combined-npm-downloads/1.0.0?packages=popper.js,@popperjs/core" alt="npm downloads per month (popper.js + @popperjs/core)" />
-  </a>
-  <a href="https://rollingversions.com/popperjs/popper-core">
-    <img src="https://img.shields.io/badge/Rolling%20Versions-Enabled-brightgreen?style=for-the-badge" alt="Rolling Versions" />
-  </a>
-</p>
+[![Twitter Follow](https://img.shields.io/twitter/follow/michalsnik.svg?style=social)](https://twitter.com/michalsnik) [![Twitter URL](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/home?status=AOS%20-%20Animate%20on%20Scroll%20library%0Ahttps%3A//github.com/michalsnik/aos)
 
-<br />
-<!-- </HEADER> // NOW BEGINS THE README -->
+Small library to animate elements on your page as you scroll.
 
-**Positioning tooltips and popovers is difficult. Popper is here to help!**
+You may say it's like WOWJS, yeah - you're right, effect is similar to WOWJS, but I had a different idea how to make such a plugin, so here it is. CSS3 driven scroll animation library.
 
-Given an element, such as a button, and a tooltip element describing it, Popper
-will automatically put the tooltip in the right place near the button.
+AOS allows you to animate elements as you scroll down, and up.
+If you scroll back to top, elements will animate to it's previous state and are ready to animate again if you scroll down.
 
-It will position _any_ UI element that "pops out" from the flow of your document
-and floats near a target element. The most common example is a tooltip, but it
-also includes popovers, drop-downs, and more. All of these can be generically
-described as a "popper" element.
+👉 To get a better understanding how this actually works, I encourage you to check [my post on CSS-tricks](https://css-tricks.com/aos-css-driven-scroll-animation-library/).
 
-## Demo
+---
 
-[![Popper visualized](https://i.imgur.com/F7qWsmV.jpg)](https://popper.js.org)
+### 🚀 [Demo](http://michalsnik.github.io/aos/)
 
-## Docs
+### 🌟 Codepen Examples
+- [Different build in animations](http://codepen.io/michalsnik/pen/WxNdvq)
+- [With anchor setting in use](http://codepen.io/michalsnik/pen/jrOYVO)
+- [With anchor-placement and different easing](http://codepen.io/michalsnik/pen/EyxoNm)
+- [With simple custom animations](http://codepen.io/michalsnik/pen/WxvNvE)
 
-- [v2.x (latest)](https://popper.js.org/docs/v2/)
-- [v1.x](https://popper.js.org/docs/v1/)
+---
 
-We've created a
-[Migration Guide](https://popper.js.org/docs/v2/migration-guide/) to help you
-migrate from Popper 1 to Popper 2.
+## ❗ Attention
+From version `2.0.0` attributes `aos` are no longer supported, always use `data-aos`.
 
-To contribute to the Popper website and documentation, please visit the
-[dedicated repository](https://github.com/popperjs/website).
+## ⚙ Setup
 
-## Why not use pure CSS?
+### Install AOS
 
-- **Clipping and overflow issues**: Pure CSS poppers will not be prevented from
-  overflowing clipping boundaries, such as the viewport. It will get partially
-  cut off or overflows if it's near the edge since there is no dynamic
-  positioning logic. When using Popper, your popper will always be positioned in
-  the right place without needing manual adjustments.
-- **No flipping**: CSS poppers will not flip to a different placement to fit
-  better in view if necessary. While you can manually adjust for the main axis
-  overflow, this feature cannot be achieved via CSS alone. Popper automatically
-  flips the tooltip to make it fit in view as best as possible for the user.
-- **No virtual positioning**: CSS poppers cannot follow the mouse cursor or be
-  used as a context menu. Popper allows you to position your tooltip relative to
-  any coordinates you desire.
-- **Slower development cycle**: When pure CSS is used to position popper
-  elements, the lack of dynamic positioning means they must be carefully placed
-  to consider overflow on all screen sizes. In reusable component libraries,
-  this means a developer can't just add the component anywhere on the page,
-  because these issues need to be considered and adjusted for every time. With
-  Popper, you can place your elements anywhere and they will be positioned
-  correctly, without needing to consider different screen sizes, layouts, etc.
-  This massively speeds up development time because this work is automatically
-  offloaded to Popper.
-- **Lack of extensibility**: CSS poppers cannot be easily extended to fit any
-  arbitrary use case you may need to adjust for. Popper is built with
-  extensibility in mind.
+- Using `bower`
 
-## Why Popper?
+    ```bash
+      bower install aos --save
+    ```
 
-With the CSS drawbacks out of the way, we now move on to Popper in the
-JavaScript space itself.
+- Using `npm`
 
-Naive JavaScript tooltip implementations usually have the following problems:
+    ```bash
+      npm install aos --save
+    ```
 
-- **Scrolling containers**: They don't ensure the tooltip stays with the
-  reference element while scrolling when inside any number of scrolling
-  containers.
-- **DOM context**: They often require the tooltip move outside of its original
-  DOM context because they don't handle `offsetParent` contexts.
-- **Compatibility**: Popper handles an incredible number of edge cases regarding
-  different browsers and environments (mobile viewports, RTL, scrollbars enabled
-  or disabled, etc.). Popper is a popular and well-maintained library, so you
-  can be confident positioning will work for your users on any device.
-- **Configurability**: They often lack advanced configurability to suit any
-  possible use case.
-- **Size**: They are usually relatively large in size, or require an ancient
-  jQuery dependency.
-- **Performance**: They often have runtime performance issues and update the
-  tooltip position too slowly.
+- Direct download -> [click here](https://github.com/michalsnik/aos/archive/master.zip)
 
-**Popper solves all of these key problems in an elegant, performant manner.** It
-is a lightweight ~3 kB library that aims to provide a reliable and extensible
-positioning engine you can use to ensure all your popper elements are positioned
-in the right place.
 
-When you start writing your own popper implementation, you'll quickly run into
-all of the problems mentioned above. These widgets are incredibly common in our
-UIs; we've done the hard work figuring this out so you don't need to spend hours
-fixing and handling numerous edge cases that we already ran into while building
-the library!
-
-Popper is used in popular libraries like Bootstrap, Foundation, Material UI, and
-more. It's likely you've already used popper elements on the web positioned by
-Popper at some point in the past few years.
-
-Since we write UIs using powerful abstraction libraries such as React or Angular
-nowadays, you'll also be glad to know Popper can fully integrate with them and
-be a good citizen together with your other components. Check out `react-popper`
-for the official Popper wrapper for React.
-
-## Installation
-
-### 1. Package Manager
-
-```bash
-# With npm
-npm i @popperjs/core
-
-# With Yarn
-yarn add @popperjs/core
-```
-
-### 2. CDN
+### Link styles
 
 ```html
-<!-- Development version -->
-<script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.js"></script>
-
-<!-- Production version -->
-<script src="https://unpkg.com/@popperjs/core@2"></script>
+  <link rel="stylesheet" href="bower_components/aos/dist/aos.css" />
 ```
 
-### 3. Direct Download?
-
-Managing dependencies by "directly downloading" them and placing them into your
-source code is not recommended for a variety of reasons, including missing out
-on feat/fix updates easily. Please use a versioning management system like a CDN
-or npm/Yarn.
-
-## Usage
-
-The most straightforward way to get started is to import Popper from the `unpkg`
-CDN, which includes all of its features. You can call the `Popper.createPopper`
-constructor to create new popper instances.
-
-Here is a complete example:
+### Add scripts
 
 ```html
-<!DOCTYPE html>
-<title>Popper example</title>
+  <script src="bower_components/aos/dist/aos.js"></script>
+```
 
-<style>
-  #tooltip {
-    background-color: #333;
-    color: white;
-    padding: 5px 10px;
-    border-radius: 4px;
-    font-size: 13px;
+AOS from version `1.2.0` is available as UMD module, so you can use it as AMD, Global, Node or ES6 module.
+
+### Init AOS
+
+```javascript
+  <script>
+    AOS.init();
+  </script>
+```
+
+## 🤔 How to use it?
+
+### Basic usage
+
+  All you have to do is to add `data-aos` attribute to html element, like so:
+
+```html
+  <div data-aos="animation_name">
+```
+
+  Script will trigger "animation_name" animation on this element, if you scroll to it.
+
+  [Down below](https://github.com/michalsnik/aos#-animations) is a list of all available animations for now :)
+
+### 🔥 Advanced settings
+
+These settings can be set both on certain elements, or as default while initializing script (in options object without `data-` part).
+
+| Attribute | Description | Example value | Default value |
+|---------------------------|-------------|---------------|---------|
+| *`data-aos-offset`* | Change offset to trigger animations sooner or later (px) | 200 | 120 |
+| *`data-aos-duration`* | *Duration of animation (ms) | 600 | 400 |
+| *`data-aos-easing`* | Choose timing function to ease elements in different ways | ease-in-sine | ease |
+| *`data-aos-delay`* | Delay animation (ms) | 300 | 0 |
+| *`data-aos-anchor`* | Anchor element, whose offset will be counted to trigger animation instead of actual elements offset | #selector | null |
+| *`data-aos-anchor-placement`* | Anchor placement - which one position of element on the screen should trigger animation | top-center | top-bottom |
+| *`data-aos-once`* | Choose wheter animation should fire once, or every time you scroll up/down to element | true | false |
+
+*Duration accept values from 50 to 3000, with step 50ms, it's because duration of animation is handled by css, and to not make css longer than it is already I created implementations only in this range. I think this should be good for almost all cases.
+
+If not, you may write simple CSS on your page that will add another duration option value available, for example:
+
+```css
+  body[data-aos-duration='4000'] [data-aos], [data-aos][data-aos][data-aos-duration='4000']{
+    transition-duration: 4000ms;
   }
-</style>
-
-<button id="button" aria-describedby="tooltip">I'm a button</button>
-<div id="tooltip" role="tooltip">I'm a tooltip</div>
-
-<script src="https://unpkg.com/@popperjs/core@^2.0.0"></script>
-<script>
-  const button = document.querySelector('#button');
-  const tooltip = document.querySelector('#tooltip');
-
-  // Pass the button, the tooltip, and some options, and Popper will do the
-  // magic positioning for you:
-  Popper.createPopper(button, tooltip, {
-    placement: 'right',
-  });
-</script>
 ```
 
-Visit the [tutorial](https://popper.js.org/docs/v2/tutorial/) for an example of
-how to build your own tooltip from scratch using Popper.
+This code will add 4000ms duration available for you to set on AOS elements, or to set as global duration while initializing AOS script.
 
-### Module bundlers
+Notice that double `[data-aos][data-aos]` - it's not a mistake, it is a trick, to make individual settings more important than global, without need to write ugly "!important" there :)
 
-You can import the `createPopper` constructor from the fully-featured file:
+`data-aos-anchor-placement` - You can set different placement option on each element, the principle is pretty simple, each anchor-placement option contains two words i.e. `top-center`. This means that animation will be triggered when `top` of element will reach `center` of the window.
+`bottom-top` means that animation will be triggered when `bottom` of an element reach `top` of the window, and so on.
+Down below you can find list of all anchor-placement options.
 
-```js
-import { createPopper } from '@popperjs/core';
+#### Examples:
 
-const button = document.querySelector('#button');
-const tooltip = document.querySelector('#tooltip');
-
-// Pass the button, the tooltip, and some options, and Popper will do the
-// magic positioning for you:
-createPopper(button, tooltip, {
-  placement: 'right',
-});
+```html
+  <div data-aos="fade-zoom-in" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="600">
+```
+```html
+  <div data-aos="flip-left" data-aos-delay="100" data-aos-anchor=".example-selector">
+```
+```html
+  <div data-aos="fade-up" data-aos-anchor-placement="top-center">
 ```
 
-All the modifiers listed in the docs menu will be enabled and "just work", so
-you don't need to think about setting Popper up. The size of Popper including
-all of its features is about 5 kB minzipped, but it may grow a bit in the
-future.
 
-#### Popper Lite (tree-shaking)
+#### API
 
-If bundle size is important, you'll want to take advantage of tree-shaking. The
-library is built in a modular way to allow to import only the parts you really
-need.
+AOS object is exposed as a global variable, for now there are three methods available:
 
-```js
-import { createPopperLite as createPopper } from '@popperjs/core';
+  * `init` - initialize AOS
+  * `refresh` - recalculate all offsets and positions of elements (called on window resize)
+  * `refreshHard` - reinit array with AOS elements and trigger `refresh` (called on DOM changes that are related to `aos` elements)
+
+Example execution:
+```javascript
+  AOS.refresh();
 ```
 
-The Lite version includes the most necessary modifiers that will compute the
-offsets of the popper, compute and add the positioning styles, and add event
-listeners. This is close in bundle size to pure CSS tooltip libraries, and
-behaves somewhat similarly.
+By default AOS is watching for DOM changes and if there are any new elements loaded asynchronously or when something is removed from DOM it calls `refreshHard` automatically. In browsers that don't support `MutationObserver` like IE you might need to call `AOS.refreshHard()` by yourself.
 
-However, this does not include the features that makes Popper truly useful.
+`refresh` method is called on window resize and so on, as it doesn't require to build new store with AOS elements and should be as light as possible.
 
-The two most useful modifiers not included in Lite are `preventOverflow` and
-`flip`:
+### Global settings
 
-```js
-import {
-  createPopperLite as createPopper,
-  preventOverflow,
-  flip,
-} from '@popperjs/core';
+If you don't want to change setting for each element separately, you can change it globally.
 
-const button = document.querySelector('#button');
-const tooltip = document.querySelector('#tooltip');
+To do this, pass options object to `init()` function, like so:
 
-createPopper(button, tooltip, {
-  modifiers: [preventOverflow, flip],
-});
+```javascript
+  <script>
+    AOS.init({
+      offset: 200,
+      duration: 600,
+      easing: 'ease-in-sine',
+      delay: 100,
+    });
+  </script>
 ```
 
-As you make more poppers, you may be finding yourself needing other modifiers
-provided by the library.
+#### Additional configuration
 
-See [tree-shaking](https://popper.js.org/docs/v2/performance/#tree-shaking) for more
-information.
+These settings can be set only in options object while initializing AOS.
 
-## Distribution targets
+| Setting | Description | Example value | Default value |
+|---------------------------|-------------|---------------|---------|
+| *`disable`* | Condition when AOS should be disabled | mobile | false |
+| *`startEvent`* | Name of event, on which AOS should be initialized | exampleEvent | DOMContentLoaded |
 
-Popper is distributed in 3 different versions, in 3 different file formats.
+##### Disabling AOS
 
-The 3 file formats are:
+If you want to disable AOS on certain device or under any statement you can set `disable` option. Like so:
 
-- `esm` (works with `import` syntax — **recommended**)
-- `umd` (works with `<script>` tags or RequireJS)
-- `cjs` (works with `require()` syntax)
-
-There are two different `esm` builds, one for bundler consumers (e.g. webpack,
-Rollup, etc..), which is located under `/lib`, and one for browsers with native
-support for ES Modules, under `/dist/esm`. The only difference within the two,
-is that the browser-compatible version doesn't make use of
-`process.env.NODE_ENV` to run development checks.
-
-The 3 versions are:
-
-- `popper`: includes all the modifiers (features) in one file (**default**);
-- `popper-lite`: includes only the minimum amount of modifiers to provide the
-  basic functionality;
-- `popper-base`: doesn't include any modifier, you must import them separately;
-
-Below you can find the size of each version, minified and compressed with the
-[Brotli compression algorithm](https://medium.com/groww-engineering/enable-brotli-compression-in-webpack-with-fallback-to-gzip-397a57cf9fc6):
-
-<!-- Don't change the labels to use hyphens, it breaks, even when encoded -->
-
-![](https://badge-size.now.sh/https://unpkg.com/@popperjs/core/dist/umd/popper.min.js?compression=brotli&label=popper)
-![](https://badge-size.now.sh/https://unpkg.com/@popperjs/core/dist/umd/popper-lite.min.js?compression=brotli&label=popper%20lite)
-![](https://badge-size.now.sh/https://unpkg.com/@popperjs/core/dist/umd/popper-base.min.js?compression=brotli&label=popper%20base)
-
-## Hacking the library
-
-If you want to play with the library, implement new features, fix a bug you
-found, or simply experiment with it, this section is for you!
-
-First of all, make sure to have
-[Yarn installed](https://yarnpkg.com/lang/en/docs/install).
-
-Install the development dependencies:
-
-```bash
-yarn install
+```javascript
+  <script>
+    AOS.init({
+      disable: 'mobile'
+    });
+  </script>
 ```
 
-And run the development environment:
+There are several options that you can use to fit AOS perfectly into your project, you can pass one of three device types:
+`mobile` (phones and tablets), `phone` or `tablet`. This will disable AOS on those certains devices. But if you want make your own condition, simple type your statement instead of device type name:
 
-```bash
-yarn dev
+```javascript
+  disable: window.innerWidth < 1024
 ```
 
-Then, simply open one the development server web page:
+There is also posibility to pass a `function`, which should at the end return `true` or `false`:
 
-```bash
-# macOS and Linux
-open localhost:5000
-
-# Windows
-start localhost:5000
+```javascript
+  disable: function () {
+    var maxWidth = 1024;
+    return window.innerWidth < maxWidth;
+  }
 ```
 
-From there, you can open any of the examples (`.html` files) to fiddle with
-them.
+##### Start event
 
-Now any change you will made to the source code, will be automatically compiled,
-you just need to refresh the page.
+If you don't want to initialize AOS on `DOMContentLoaded` event, you can pass your own event name and trigger it whenever you want. AOS is listening for this event on `document` element.
 
-If the page is not working properly, try to go in _"Developer Tools >
-Application > Clear storage"_ and click on "_Clear site data_".  
-To run the examples you need a browser with
-[JavaScript modules via script tag support](https://caniuse.com/#feat=es6-module).
-
-## Test Suite
-
-Popper is currently tested with unit tests, and functional tests. Both of them
-are run by Jest.
-
-### Unit Tests
-
-The unit tests use JSDOM to provide a primitive document object API, they are
-used to ensure the utility functions behave as expected in isolation.
-
-### Functional Tests
-
-The functional tests run with Puppeteer, to take advantage of a complete browser
-environment. They are currently running on Chromium, and Firefox.
-
-You can run them with `yarn test:functional`. Set the `PUPPETEER_BROWSER`
-environment variable to `firefox` to run them on the Mozilla browser.
-
-The assertions are written in form of image snapshots, so that it's easy to
-assert for the correct Popper behavior without having to write a lot of offsets
-comparisons manually.
-
-You can mark a `*.test.js` file to run in the Puppeteer environment by
-prepending a `@jest-environment puppeteer` JSDoc comment to the interested file.
-
-Here's an example of a basic functional test:
-
-```js
-/**
- * @jest-environment puppeteer
- * @flow
- */
-import { screenshot } from '../utils/puppeteer.js';
-
-it('should position the popper on the right', async () => {
-  const page = await browser.newPage();
-  await page.goto(`${TEST_URL}/basic.html`);
-
-  expect(await screenshot(page)).toMatchImageSnapshot();
-});
+```javascript
+  <script>
+    AOS.init({
+      startEvent: 'someCoolEvent'
+    });
+  </script>
 ```
 
-You can find the complete
-[`jest-puppeteer` documentation here](https://github.com/smooth-code/jest-puppeteer#api),
-and the
-[`jest-image-snapshot` documentation here](https://github.com/americanexpress/jest-image-snapshot#%EF%B8%8F-api).
+**Important note:** If you set `startEvent: 'load'` it will add event listener on `window` instead of `document`.
 
-## License
 
-MIT
+### 👻 Animations
+
+There are serveral predefined animations you can use already:
+
+  * Fade animations:
+    * fade
+    * fade-up
+    * fade-down
+    * fade-left
+    * fade-right
+    * fade-up-right
+    * fade-up-left
+    * fade-down-right
+    * fade-down-left
+
+  * Flip animations:
+    * flip-up
+    * flip-down
+    * flip-left
+    * flip-right
+
+  * Slide animations:
+    * slide-up
+    * slide-down
+    * slide-left
+    * slide-right
+
+  * Zoom animations:
+    * zoom-in
+    * zoom-in-up
+    * zoom-in-down
+    * zoom-in-left
+    * zoom-in-right
+    * zoom-out
+    * zoom-out-up
+    * zoom-out-down
+    * zoom-out-left
+    * zoom-out-right
+
+### Anchor placement:
+
+  * top-bottom
+  * top-center
+  * top-top
+  * center-bottom
+  * center-center
+  * center-top
+  * bottom-bottom
+  * bottom-center
+  * bottom-top
+
+
+### Easing functions:
+
+You can choose one of these timing function to animate elements nicely:
+
+  * linear
+  * ease
+  * ease-in
+  * ease-out
+  * ease-in-out
+  * ease-in-back
+  * ease-out-back
+  * ease-in-out-back
+  * ease-in-sine
+  * ease-out-sine
+  * ease-in-out-sine
+  * ease-in-quad
+  * ease-out-quad
+  * ease-in-out-quad
+  * ease-in-cubic
+  * ease-out-cubic
+  * ease-in-out-cubic
+  * ease-in-quart
+  * ease-out-quart
+  * ease-in-out-quart
+
+## ✌️ [Contributing](CONTRIBUTING.md)
+
+## 📝 [Changelog](CHANGELOG.md)
+
+## ❔Questions
+
+If you have any questions, ideas or whatsoever, please check [AOS contribution guide](CONTRIBUTING.md) and don't hesitate to create new issues.
