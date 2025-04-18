@@ -1,0 +1,412 @@
+@media (max-width: 1199.98px) {
+  .hero-content h1 {
+    font-size: 3.5rem;
+  }
+  
+  .section {
+    padding: 80px 0;
+  }
+  
+  .section-title h2 {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .navbar-brand {
+    font-size: 1.8rem;
+  }
+  
+  .hero-content h1 {
+    font-size: 3rem;
+  }
+  
+  .hero-content p {
+    font-size: 1.2rem;
+  }
+  
+  .section {
+    padding: 70px 0;
+  }
+  
+  .section-title h2 {
+    font-size: 2.2rem;
+  }
+  
+  .about-content {
+    margin-top: 30px;
+  }
+  
+  .service-item {
+    padding: 30px 20px;
+  }
+  
+  .why-us-item {
+    padding: 25px 20px;
+  }
+  
+  .testimonial-item {
+    padding: 30px 20px;
+  }
+  
+  .stat-number {
+    font-size: 3rem;
+  }
+  
+  .stat-title {
+    font-size: 1.1rem;
+  }
+  
+  .cta-content h2 {
+    font-size: 2.5rem;
+  }
+  
+  .footer {
+    padding: 70px 0 0;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .navbar-brand {
+    font-size: 1.6rem;
+  }
+  
+  .hero-section {
+    min-height: 600px;
+  }
+  
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+  
+  .hero-content p {
+    font-size: 1.1rem;
+  }
+  
+  .section {
+    padding: 60px 0;
+  }
+  
+  .section-title {
+    margin-bottom: 40px;
+  }
+  
+  .section-title h2 {
+    font-size: 2rem;
+  }
+  
+  .section-title p {
+    font-size: 1rem;
+  }
+  
+  .service-item, 
+  .why-us-item, 
+  .testimonial-item {
+    padding: 25px 20px;
+    margin-bottom: 20px;
+  }
+  
+  .service-image {
+    height: 180px;
+  }
+  
+  .service-icon {
+    font-size: 2.5rem;
+  }
+  
+  .service-title {
+    font-size: 1.3rem;
+  }
+  
+  .why-us-icon {
+    font-size: 2rem;
+    margin-left: 15px;
+  }
+  
+  .why-us-content h4 {
+    font-size: 1.2rem;
+  }
+  
+  .cta-content h2 {
+    font-size: 2.2rem;
+  }
+  
+  .cta-content p {
+    font-size: 1.1rem;
+  }
+  
+  .btn-cta {
+    padding: 12px 30px;
+  }
+  
+  .footer {
+    padding: 60px 0 0;
+  }
+  
+  .footer-title {
+    margin-top: 30px;
+  }
+  
+  .stat-item {
+    margin-bottom: 30px;
+  }
+  
+  .col-md-3:last-child .stat-item {
+    margin-bottom: 0;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .navbar-brand {
+    font-size: 1.5rem;
+  }
+  
+  .hero-section {
+    min-height: 500px;
+  }
+  
+  .hero-content h1 {
+    font-size: 2.2rem;
+  }
+  
+  .hero-content p {
+    font-size: 1rem;
+  }
+  
+  .section {
+    padding: 50px 0;
+  }
+  
+  .section-title {
+    margin-bottom: 30px;
+  }
+  
+  .section-title h2 {
+    font-size: 1.8rem;
+  }
+  
+  .section-title h2:after {
+    height: 3px;
+    bottom: -8px;
+  }
+  
+  .btn {
+    padding: 8px 20px;
+    font-size: 0.9rem;
+  }
+  
+  .service-image {
+    height: 160px;
+  }
+  
+  .service-icon {
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+  }
+  
+  .service-title {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+  
+  .why-us-item {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .why-us-icon {
+    margin-left: 0;
+    margin-bottom: 15px;
+  }
+  
+  .cta-content h2 {
+    font-size: 1.8rem;
+  }
+  
+  .cta-content p {
+    font-size: 1rem;
+  }
+  
+  .btn-cta {
+    padding: 10px 25px;
+  }
+  
+  .stat-number {
+    font-size: 2.5rem;
+  }
+  
+  .stat-title {
+    font-size: 1.1rem;
+  }
+  
+  .footer-logo {
+    font-size: 1.8rem;
+  }
+  
+  .footer-title {
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+  }
+  
+  .footer-bottom {
+    margin-top: 40px;
+  }
+  
+  .back-to-top {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+  }
+}
+
+/* تحسينات إضافية للأجهزة الصغيرة جداً */
+@media (max-width: 359.98px) {
+  .hero-content h1 {
+    font-size: 1.8rem;
+  }
+  
+  .section-title h2 {
+    font-size: 1.6rem;
+  }
+  
+  .btn-primary {
+    padding: 8px 15px;
+    font-size: 0.85rem;
+  }
+  
+  .service-title {
+    font-size: 1.1rem;
+  }
+  
+  .why-us-content h4 {
+    font-size: 1.1rem;
+  }
+  
+  .cta-content h2 {
+    font-size: 1.6rem;
+  }
+  
+  .btn-cta {
+    padding: 8px 20px;
+    font-size: 0.9rem;
+  }
+}
+
+/* تحسينات للشاشات الكبيرة */
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1320px;
+  }
+  
+  .hero-content h1 {
+    font-size: 4.5rem;
+  }
+  
+  .hero-content p {
+    font-size: 1.5rem;
+  }
+  
+  .section-title h2 {
+    font-size: 3rem;
+  }
+  
+  .service-item {
+    padding: 50px 35px;
+  }
+  
+  .service-image {
+    height: 220px;
+  }
+  
+  .why-us-item {
+    padding: 35px;
+  }
+  
+  .testimonial-item {
+    padding: 50px 35px;
+  }
+}
+
+/* تحسينات للتأثيرات المتحركة على الأجهزة المحمولة */
+@media (max-width: 767.98px) {
+  .particle {
+    display: none;
+  }
+  
+  .wave {
+    height: 60px;
+    background-size: 1440px 60px;
+  }
+  
+  .bubble {
+    display: none;
+  }
+  
+  .line {
+    display: none;
+  }
+  
+  .hero-bg-animation,
+  .about-bg-animation,
+  .services-bg-animation,
+  .why-us-bg-animation,
+  .testimonials-bg-animation,
+  .stats-bg-animation,
+  .cta-bg-animation,
+  .footer-bg-animation {
+    animation-duration: 30s;
+  }
+}
+
+/* تحسينات لزر العودة للأعلى */
+.back-to-top {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  width: 45px;
+  height: 45px;
+  background-color: var(--primary-color);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  z-index: 99;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.back-to-top.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.back-to-top:hover {
+  background-color: var(--primary-dark);
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* تحسينات للقائمة المنسدلة على الأجهزة المحمولة */
+@media (max-width: 991.98px) {
+  .navbar-collapse {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    margin-top: 15px;
+  }
+  
+  .navbar-nav .nav-link {
+    padding: 12px 15px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  }
+  
+  .navbar-nav .nav-link:last-child {
+    border-bottom: none;
+  }
+}

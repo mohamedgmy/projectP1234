@@ -1,0 +1,119 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="mb-0">لوحة التحكم الرئيسية</h5>
+                </div>
+                <div class="card-body">
+                    <h2 class="text-center mb-4">مرحباً بك في لوحة تحكم مطبعة بيرق</h2>
+                    <p class="text-center">يمكنك إدارة محتوى الموقع من هنا</p>
+                    
+                    <div class="row mt-5">
+                        <div class="col-md-6 mb-3">
+                            <div class="card bg-light">
+                                <div class="card-body text-center">
+                                    <i class="fas fa-chart-bar fa-3x text-primary mb-3"></i>
+                                    <h5>الإحصائيات</h5>
+                                    <p>إدارة الإحصائيات المعروضة في الموقع</p>
+                                    <a href="{{ url_for('manage_statistics') }}" class="btn btn-primary">إدارة الإحصائيات</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <div class="card bg-light">
+                                <div class="card-body text-center">
+                                    <i class="fas fa-envelope fa-3x text-primary mb-3"></i>
+                                    <h5>الرسائل</h5>
+                                    <p>عرض وإدارة رسائل التواصل</p>
+                                    <a href="{{ url_for('manage_messages') }}" class="btn btn-primary">عرض الرسائل</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="mb-0">إحصائيات سريعة</h5>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <div class="card bg-primary text-white">
+                                <div class="card-body text-center">
+                                    <h3 id="stats-count">...</h3>
+                                    <p>إجمالي الإحصائيات</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <div class="card bg-success text-white">
+                                <div class="card-body text-center">
+                                    <h3 id="messages-count">...</h3>
+                                    <p>رسائل التواصل</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-4">
+                        <h5>آخر تحديث للموقع</h5>
+                        <p id="last-update">{{ now.strftime('%Y-%m-%d %H:%M:%S') }}</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card mt-4">
+                <div class="card-header">
+                    <h5 class="mb-0">روابط سريعة</h5>
+                </div>
+                <div class="card-body">
+                    <div class="list-group">
+                        <a href="/" target="_blank" class="list-group-item list-group-item-action">
+                            <i class="fas fa-globe me-2"></i> عرض الموقع
+                        </a>
+                        <a href="{{ url_for('manage_statistics') }}" class="list-group-item list-group-item-action">
+                            <i class="fas fa-chart-bar me-2"></i> إدارة الإحصائيات
+                        </a>
+                        <a href="{{ url_for('manage_messages') }}" class="list-group-item list-group-item-action">
+                            <i class="fas fa-envelope me-2"></i> عرض الرسائل
+                        </a>
+                        <a href="{{ url_for('logout') }}" class="list-group-item list-group-item-action text-danger">
+                            <i class="fas fa-sign-out-alt me-2"></i> تسجيل الخروج
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+    // تحديث الإحصائيات السريعة
+    document.addEventListener('DOMContentLoaded', function() {
+        // الحصول على عدد الإحصائيات
+        fetch('/api/statistics')
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('stats-count').textContent = data.length;
+            })
+            .catch(error => {
+                console.error('Error fetching statistics:', error);
+                document.getElementById('stats-count').textContent = 'خطأ';
+            });
+            
+        // يمكن إضافة المزيد من الإحصائيات هنا
+        // مثال: عدد الرسائل (يتطلب إنشاء API لذلك)
+        document.getElementById('messages-count').textContent = '...';
+    });
+</script>
+{% endblock %}
